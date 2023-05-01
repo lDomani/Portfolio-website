@@ -1,0 +1,162 @@
+:root{
+    --apple:#ffff;
+    --sage:#d0e9b1;
+    --peach:#e7cc96;
+    --charcoal:#032614;
+    --redApple:#e5463a;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: "Oxygen", sans-serif;
+}
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--sans);
+    background-color: var(--charcoal);
+    color: var(--apple);
+    font-size: var(--font-size);
+}
+h1, h2, h3{
+    margin:0;
+}
+a{
+    color:var(--peach);
+}
+a:hover{
+    color: var(--redApple);
+    text-decoration: none;
+}
+
+#intro{
+    padding: 4rem 1rem 10rem 1rem;
+    text-align: center;
+}
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+#intro .name{
+    font-family: var(--mono);
+}
+.name span{
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--sage);
+    display: block;
+}
+#intro h2{
+    font-size: 4rem;
+    font-weight: normal;
+}
+#contact{
+    width:400px;
+    text-align: center;
+    margin:0 auto;
+    padding: 3rem 0;
+    background-color: var();
+}
+.bgc{
+    background-color: var(--peach);
+}
+.gradient{
+    background: rgb(238,121,81);
+background: linear-gradient(90deg, rgba(238,121,81,1) 0%, rgba(247,229,80,1) 50%, rgba(133,223,107,1) 100%);
+height:2px;
+}
+#contact p:last-child{
+    margin-top: 3rem;
+}
+nav{
+font-family: var(--mono);
+font-size: 80%;
+padding: 1rem;
+}
+nav h1 a{
+    font-family: var(--sans);
+}
+nav ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+nav li:first-child{
+    flex-basis: 100%;
+    text-align: center;
+}
+nav a{
+    color: var(--sage);
+    text-decoration: none;
+    display: block;
+
+}
+.button{
+    background-color: var(--redApple);
+    padding:.5rem;
+    border-radius:5px;
+    font-family: var(--mono);
+    text-decoration: none;
+}
+.button:hover{
+    color:var(--redApple);
+    background-color: var(--sage);
+}
+nav a:hover{
+    color: var(--redApple);
+}
+nav [class*="fa-"]{
+    font-size: 150%;
+    color:var(--sage)
+}
+
+nav h1 [class*="fa-"]{
+    font-size: 100%;
+    color: var(--sage);
+}
+nav a:hover,
+nav [class*="fa-"]:hover{
+    color:var(--redApple)
+}
+
+
+@media (min-width: 850px){
+    nav{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    nav li:first-child{
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
+footer{
+    text-align: center;
+    padding: 4rem 0;
+}
+footer ul{
+    list-style-type: none;
+    padding:0;
+    margin:2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-flow:row wrap;
+    gap:3rem;
+    font-size:3rem;
+}
+.copyright{
+    font-size: .7rem;
+}
