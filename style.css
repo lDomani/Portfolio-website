@@ -4,6 +4,7 @@
     --peach:#e7cc96;
     --charcoal:#032614;
     --redApple:#e5463a;
+    --gradient: linear-gradient(90deg, rgba(238,121,81,1) 0%, rgba(247,229,80,1) 50%, rgba(133,223,107,1) 100%);
     --font-size: 1.3rem;
     --mono: "Oxygen mono", monospace;
     --sans: "Oxygen", sans-serif;
@@ -39,6 +40,10 @@ a:hover{
 #intro{
     padding: 4rem 1rem 10rem 1rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 #intro p {
     font-size: 1rem;
@@ -62,7 +67,7 @@ a:hover{
     text-align: center;
     margin:0 auto;
     padding: 3rem 0;
-    background-color: var();
+    color:var(--charcoal)
 }
 .bgc{
     background-color: var(--peach);
@@ -79,6 +84,15 @@ nav{
 font-family: var(--mono);
 font-size: 80%;
 padding: 1rem;
+top:0;
+position:sticky;
+background-color: var(--charcoal);
+}
+nav .gradient{
+    position: absolute;
+    bottom: 0rem;
+    width:100%;
+    left:0;
 }
 nav h1 a{
     font-family: var(--sans);
@@ -130,11 +144,43 @@ nav a:hover,
 nav [class*="fa-"]:hover{
     color:var(--redApple)
 }
-
-
+/* projects */
+#projects{
+    padding:4rem 1rem;
+}
+#projects h2{
+    font-size: 2.5rem;
+    margin-bottom:calc(2.5rem * 1.5);
+}
+#projects h3{
+    color: var(--sage);
+}
+#projects h4{
+    font-size: 1rem;
+    font-family: var(--mono);
+    margin: 0;
+}
+.pop-box{
+    background-color: var(--peach);
+    color:var(--charcoal);
+    padding:1rem;
+    border-radius:10px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+#projects ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
 @media (min-width: 850px){
     nav{
-        max-width: 1200px;
+        max-width: auto;
         margin: 0 auto;
     }
     nav li:first-child{
@@ -159,4 +205,21 @@ footer ul{
 }
 .copyright{
     font-size: .7rem;
+    font-weight: 1;
+}
+.pfp{
+    max-width: 100px;
+    max-height: auto;
+    padding:.2rem;
+    background: rgb(238,121,81);
+    background: linear-gradient(90deg, rgba(238,121,81,1) 0%, rgba(247,229,80,1) 50%, rgba(133,223,107,1) 100%);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    margin: 1.5rem;
+
+}
+.pfp img{
+    width:100%;
+    border-radius: 1rem;
 }
